@@ -31,13 +31,16 @@ const urlsToCache = [
 
 
 
-// Installer le Service Worker et mettre en cache les fichiers statiques
 self.addEventListener('install', event => {
     event.waitUntil(
         caches.open(CACHE_NAME)
             .then(cache => {
                 console.log('Fichiers mis en cache');
-                return cache.addAll(urlsToCache);
+                return Promise.all(urlsToCache.map(url => {
+                    return cache.add(url).catch(err => {
+                        console.error('Échec de la mise en cache pour', url, ':', err);
+                    });
+                }));
             })
     );
 });
