@@ -2,10 +2,6 @@
 
 const CACHE_NAME = 'trailwalker-cache-v1';
 const urlsToCache = [
-    './',
-    './index.html',
-    './style.min.css',
-    './script.min.js',
     './01 km.mp4',
     './03 km.mp4',
     './10 km.mp4',
