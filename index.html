@@ -22,27 +22,27 @@
 
     <!-- Grille de boutons -->
     <div class="btn-grid">
-        <button class="btn" onclick="showVideo('01 km.mp4', 12, 21, 0)">1 km</button>
-        <button class="btn" onclick="showVideo('03 km.mp4', 12, 9, 0)">3 km</button>
-        <button class="btn" onclick="showVideo('10 km.mp4', 12, 9, 30)">10 km</button>
-        <button class="btn" onclick="showVideo('15 km.mp4', 12, 10, 0)">15 km</button>
-        <button class="btn" onclick="showVideo('20 km.mp4', 12, 11, 30)">20 km</button>
-        <button class="btn" onclick="showVideo('25 km.mp4', 12, 12, 0)">25 km</button>
-        <button class="btn" onclick="showVideo('30 km.mp4', 12, 12, 30)">30 km</button>
-        <button class="btn" onclick="showVideo('35 km.mp4', 12, 13, 0)">35 km</button>
-        <button class="btn" onclick="showVideo('40 km.mp4', 12, 13, 30)">40 km</button>
-        <button class="btn" onclick="showVideo('45 km.mp4', 12, 14, 0)">45 km</button>
-        <button class="btn" onclick="showVideo('50 km.mp4', 12, 14, 30)">50 km</button>
-        <button class="btn" onclick="showVideo('55 km.mp4', 12, 15, 0)">55 km</button>
-        <button class="btn" onclick="showVideo('60 km.mp4', 12, 15, 30)">60 km</button>
-        <button class="btn" onclick="showVideo('65 km.mp4', 12, 16, 0)">65 km</button>
-        <button class="btn" onclick="showVideo('70 km.mp4', 12, 16, 30)">70 km</button>
-        <button class="btn" onclick="showVideo('75 km.mp4', 12, 17, 0)">75 km</button>
-        <button class="btn" onclick="showVideo('80 km.mp4', 12, 17, 30)">80 km</button>
-        <button class="btn" onclick="showVideo('85 km.mp4', 12, 18, 0)">85 km</button>
-        <button class="btn" onclick="showVideo('90 km.mp4', 12, 22, 47)">90 km</button>
-        <button class="btn" onclick="showVideo('95 km.mp4', 12, 19, 0)">95 km</button>
-        <button class="btn" onclick="showVideo('100 km.mp4', 12, 19, 30)">100 km</button>
+        <button class="btn" onclick="showVideo('01 km.mp4', 20, 21, 0)">1 km</button>
+        <button class="btn" onclick="showVideo('03 km.mp4', 20, 9, 0)">3 km</button>
+        <button class="btn" onclick="showVideo('10 km.mp4', 20, 9, 30)">10 km</button>
+        <button class="btn" onclick="showVideo('15 km.mp4', 20, 10, 0)">15 km</button>
+        <button class="btn" onclick="showVideo('20 km.mp4', 20, 11, 30)">20 km</button>
+        <button class="btn" onclick="showVideo('25 km.mp4', 20, 12, 0)">25 km</button>
+        <button class="btn" onclick="showVideo('30 km.mp4', 20, 12, 30)">30 km</button>
+        <button class="btn" onclick="showVideo('35 km.mp4', 20, 13, 0)">35 km</button>
+        <button class="btn" onclick="showVideo('40 km.mp4', 20, 13, 30)">40 km</button>
+        <button class="btn" onclick="showVideo('45 km.mp4', 20, 14, 0)">45 km</button>
+        <button class="btn" onclick="showVideo('50 km.mp4', 20, 14, 30)">50 km</button>
+        <button class="btn" onclick="showVideo('55 km.mp4', 20, 15, 0)">55 km</button>
+        <button class="btn" onclick="showVideo('60 km.mp4', 20, 15, 30)">60 km</button>
+        <button class="btn" onclick="showVideo('65 km.mp4', 20, 16, 0)">65 km</button>
+        <button class="btn" onclick="showVideo('70 km.mp4', 20, 16, 30)">70 km</button>
+        <button class="btn" onclick="showVideo('75 km.mp4', 20, 17, 0)">75 km</button>
+        <button class="btn" onclick="showVideo('80 km.mp4', 20, 17, 30)">80 km</button>
+        <button class="btn" onclick="showVideo('85 km.mp4', 20, 18, 0)">85 km</button>
+        <button class="btn" onclick="showVideo('90 km.mp4', 20, 22, 47)">90 km</button>
+        <button class="btn" onclick="showVideo('95 km.mp4', 20, 19, 0)">95 km</button>
+        <button class="btn" onclick="showVideo('100 km.mp4', 20, 19, 30)">100 km</button>
     </div>
 
     <!-- Conteneur de vidéo -->
@@ -52,5 +52,19 @@
 
     <!-- Chargement différé du JS -->
     <script src="script.min.js" defer></script>
+
+    <!-- Enregistrement du service worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('./service-worker.js')
+                .then(function(registration) {
+                    console.log('Service Worker enregistré avec succès :', registration.scope);
+                }, function(err) {
+                    console.log('L\'enregistrement du Service Worker a échoué :', err);
+                });
+            });
+        }
+    </script>
 </body>
 </html>

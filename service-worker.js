@@ -2,6 +2,10 @@
 
 const CACHE_NAME = 'trailwalker-cache-v1';
 const urlsToCache = [
+    './',                  // Utiliser './' pour la racine du projet
+    './index.html',         // Ajouter './' devant chaque fichier pour GitHub Pages
+    './style.min.css',
+    './script.min.js',
     './01 km.mp4',
     './03 km.mp4',
     './10 km.mp4',
