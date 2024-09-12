@@ -24,6 +24,7 @@ const urlsToCache = [
     './75 km.mp4',
     './80 km.mp4',
     './85 km.mp4',
+    './88 km.mp4',
     './90 km.mp4',
     './95 km.mp4',
     './100 km.mp4',
