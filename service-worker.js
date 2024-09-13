@@ -6,7 +6,7 @@ const urlsToCache = [
     './index.html',         // Ajouter './' devant chaque fichier pour GitHub Pages
     './style.min.css',
     './script.min.js',
-    './01 km.mp4',
+    './0 km.mp4',
     './03 km.mp4',
     './10 km.mp4',
     './15 km.mp4',

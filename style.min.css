@@ -40,6 +40,10 @@ video {
     font-weight: bold; /* Met le libellé en gras */
 }
 
+.hidden {
+    visibility: hidden; /* Rend l'élément invisible tout en conservant l'espace */
+}
+
 .btn:nth-child(odd) {
     color: #00de01; /* Couleur des boutons impairs */
 }

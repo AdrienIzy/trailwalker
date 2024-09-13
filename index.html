@@ -22,7 +22,7 @@
 
     <!-- Grille de boutons -->
     <div class="btn-grid">
-        <button class="btn" onclick="showVideo('01 km.mp4', 13, 12, 0)">1 km</button>
+        <button class="btn" onclick="showVideo('0 km.mp4', 13, 12, 0)">0 km</button>
         <button class="btn" onclick="showVideo('03 km.mp4', 14, 7, 10)">3 km</button>
         <button class="btn" onclick="showVideo('10 km.mp4', 14, 8, 40)">10 km</button>
         <button class="btn" onclick="showVideo('15 km.mp4', 14, 9, 50)">15 km</button>
@@ -43,8 +43,12 @@
         <button class="btn" onclick="showVideo('88 km.mp4', 15, 4, 20)">88 km</button>
         <button class="btn" onclick="showVideo('90 km.mp4', 15, 4, 50)">90 km</button>
         <button class="btn" onclick="showVideo('95 km.mp4', 15, 6, 30)">95 km</button>
-        <!--<button class="btn" onclick="showVideo('100 km.mp4', 15, 7, 40)">100 km</button>-->
+        <button class="btn hidden"></button>
+        <button class="btn" onclick="showVideo('100 km.mp4', 15, 7, 40)">100 km</button>
+        <button class="btn hidden"></button>
     </div>
+
+
 
     <!-- Conteneur de vidéo -->
     <div id="videoContainer" style="display:none;">
